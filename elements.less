@@ -90,12 +90,6 @@
   -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
   filter: ~"alpha(opacity=@{opperc})";
 }
-.transition-duration(@duration: 0.2s) {
-  -moz-transition-duration: @duration;
-  -webkit-transition-duration: @duration;
-  -o-transition-duration: @duration;
-  transition-duration: @duration;
-}
 .transform(...) {
   -webkit-transform: @arguments;
   -moz-transform: @arguments;
@@ -108,12 +102,6 @@
 }
 .scale(@ratio:1.5){
   .transform(scale(@ratio));
-}
-.transition(@duration:0.2s, @ease:ease-out) {
-  -webkit-transition: all @duration @ease;
-  -moz-transition: all @duration @ease;
-  -o-transition: all @duration @ease;
-  transition: all @duration @ease;
 }
 .inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
   -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
@@ -180,10 +168,45 @@
   .transform(translate(@x, @y));
 }
 .background-clip(@argument: padding-box) {
-  -moz-background-clip: @argument;
   -webkit-background-clip: @argument;
-  background-clip: @argument;
-}
+     -moz-background-clip: @argument;
+          background-clip: @argument;
+}//.background-clip
+
+
+/* Transition Properties
+ * ============================================================ */
+.transition-property(@property: all) {
+  -webkit-transition-property: @property;
+     -moz-transition-property: @property;
+       -o-transition-property: @property;
+          transition-property: @property;
+}//.transition-property
+.transition-timing-function(@timing: ease) {
+  -webkit-transition-timing-function: @timing;
+     -moz-transition-timing-function: @timing;
+       -o-transition-timing-function: @timing;
+          transition-timing-function: @timing;
+}//.transition-timing-function
+.transition-delay(@delay: 0) {
+  -webkit-transition-delay: @delay;
+     -moz-transition-delay: @delay;
+       -o-transition-delay: @delay;
+          transition-delay: @delay;
+}//.transition-delay
+.transition-duration(@duration: 0.2s) {
+  -webkit-transition-duration: @duration;
+     -moz-transition-duration: @duration;
+       -o-transition-duration: @duration;
+          transition-duration: @duration;
+}//.transition-duration
+.transition(@duration: 0.2s, @ease: ease-out) {
+  -webkit-transition: all @duration @ease;
+     -moz-transition: all @duration @ease;
+       -o-transition: all @duration @ease;
+          transition: all @duration @ease;
+}//.transition
+
 
 /* Meta-Selectors
  * ============================================================ */
@@ -195,4 +218,4 @@
     background: @background;
     color: @color;
   }
-}
+}//.selection
