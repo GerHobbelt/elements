@@ -184,3 +184,15 @@
   -webkit-background-clip: @argument;
   background-clip: @argument;
 }
+
+/* Meta-Properties
+ * ============================================================ */
+.selection(@background, @color) {
+  // Safari
+  ::selection,
+  // Firefox
+  ::-moz-selection {
+    background: @background;
+    color: @color;
+  }
+}
