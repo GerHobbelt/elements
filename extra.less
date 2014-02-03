@@ -1,0 +1,64 @@
+@import "elements.less";
+
+.gradient(@color:#F5F5F5; @start:#EEE; @stop:#FFF) {
+  background: @color;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @start), color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom, @start, @stop);
+  background: -moz-linear-gradient(center bottom, @start 0%, @stop 100%);
+  background: -o-linear-gradient(@stop, @start);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+}//.gradient
+
+.bw-gradient(@color:#F5F5F5, @start:0, @stop:255) {
+  background: @color;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(@start,@start,@start)), color-stop(1, rgb(@stop,@stop,@stop)));
+  background: -ms-linear-gradient(bottom, rgb(@start,@start,@start) 0%, rgb(@stop,@stop,@stop) 100%);
+  background: -moz-linear-gradient(center bottom, rgb(@start,@start,@start) 0%, rgb(@stop,@stop,@stop) 100%);
+  background: -o-linear-gradient(rgb(@stop,@stop,@stop), rgb(@start,@start,@start));
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",rgb(@stop,@stop,@stop),rgb(@start,@start,@start)));
+}//.bw-gradient
+
+
+
+/* Shadow Properties
+ * ============================================================ */
+.inner-shadow(@horizontal:0; @vertical:1px; @blur:2px; @alpha:0.4;) {
+  .box-shadow( inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha) )
+}//.inner-shadow
+
+.drop-shadow(@x-axis:0; @y-axis:1px; @blur:2px; @alpha:0.1;) {
+  .box-shadow( @x-axis @y-axis @blur rgba(0, 0, 0, @alpha) ):
+}//.drop-shadow
+
+.glow(@color; @blur:2px;) {
+  -webkit-text-shadow: 0 0 @blur @color;
+     -moz-text-shadow: 0 0 @blur @color;
+          text-shadow: 0 0 @blur @color;
+}//.glow
+
+
+
+/* Column Properties
+ * ============================================================ */
+.columns(@colwidth:250px; @colcount:0; @colgap:50px; @columnRuleColor:#EEE; @columnRuleStyle:solid; @columnRuleWidth:1px;) {
+  .column-width(@colwidth);
+  .column-count(@colcount);
+  .column-gap(@colgap);
+  .column-rule-color(@columnRuleColor);
+  .column-rule-style(@columnRuleStyle);
+  .column-rule-width(@columnRuleWidht);
+}//.columns
+
+
+
+/* Meta-Selectors
+ * ============================================================ */
+.selection(@background, @color) {
+  // Safari
+  ::selection,
+  // Firefox
+  ::-moz-selection {
+    background: @background;
+    color: @color;
+  }
+}//.selection
