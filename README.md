@@ -82,10 +82,8 @@ for arguments.
 	`.my_mixin(@arg1:val;)`
 
 
-## Things to Mention
-Oreolek was mentioned to have a namespaced fork of the original LESS Elements codebase where the mixins are provided under a
-hash-namespace (nested mixins, so to speak). I would like to do the same here, but I need your feedback to determine the best
-way to namespace these mixins.
+## Request for Feedback
+Oreolek was mentioned to have a namespaced fork of the original LESS Elements codebase where the mixins are provided under a hash-namespace (nested mixins, so to speak). I would like to do the same with MOAR Elements, but I need your feedback to determine the best way to namespace these mixins.
 
 
 ## License
