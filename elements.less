@@ -3,8 +3,17 @@
   ---------------------------------------------------
     A set of useful LESS mixins
     More info at: http://lesselements.com
-  ---------------------------------------------------*/
+  ---------------------------------------------------
 
+  Since the prefix properties should all behave the same, their arguments should all
+  be the same. Therefore, all mixins wtihin this file (with few exceptions) should
+  pass their arguments directly to their vendor-prefixed counterparts.
+*/
+
+
+/* Because of the opacity calculations, a default value has been
+ * set to make sure that the LESS compiler doesn't complain.
+ */
 .opacity(@opacity:1.0;) {
   -webkit-opacity: @opacity;
    -khtml-opacity: @opacity;
@@ -46,18 +55,6 @@
        -o-transform: @arguments;
           transform: @arguments;
 }//.transform
-
-.rotation(@deg:5deg;){
-  .transform( rotate(@deg) );
-}//.rotation
-
-.scale(@ratio:1.5;){
-  .transform( scale(@ratio) );
-}//.scale
-
-.translate(@x:0; @y:0;) {
-  .transform( translate(@x, @y) );
-}//.translate
 
 
 
