@@ -44,6 +44,11 @@
   -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
   box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
 }
+.glow(@color, @blur: 2px) {
+  -webkit-text-shadow: 0 0 @blur @color;
+     -moz-text-shadow: 0 0 @blur @color;
+          text-shadow: 0 0 @blur @color;
+}
 .rounded(@radius: 2px) {
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
