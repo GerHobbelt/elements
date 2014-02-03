@@ -225,11 +225,11 @@
           transition-duration: @duration;
 }//.transition-duration
 
-.transition(@type:all; @duration:1x; @effect:linear; @delay:0ms;) {
-  -webkit-transition: @type @duration @effect @delay;
-     -moz-transition: @type @duration @effect @delay;
-       -o-transition: @type @duration @effect @delay;
-          transition: @type @duration @effect @delay;
+.transition(...) {
+  -webkit-transition: @arguments;
+     -moz-transition: @arguments;
+       -o-transition: @arguments;
+          transition: @arguments;
 }//.transition
 
 
