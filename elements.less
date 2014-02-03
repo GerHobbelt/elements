@@ -155,12 +155,6 @@
 
 /* Border Properties
  * ============================================================ */
-.rounded(@radius:2px;) {
-  -webkit-border-radius: @radius;
-     -moz-border-radius: @radius;
-          border-radius: @radius;
-}//.rounded
-
 .border-top-left-radius(...) {
   -webkit-border-top-left-radius: @arguments;
       -moz-border-radius-topleft: @arguments;
@@ -183,14 +177,12 @@
   -webkit-border-bottom-left-radius: @arguments;
       -moz-border-radius-bottomleft: @arguments;
           border-bottom-left-radius: @arguments;
-}//.border-botoom-left-radius
+}//.border-bottom-left-radius
 
-.border-radius(@topleft:0; @topright:0; @bottomright:0; @bottomleft:0;) {
-  .border-top-left-radius(@topleft);
-  .border-top-right-radius(@topright);
-  .border-bottom-right-radius(@bottomright);
-  .border-bottom-left-radius(@bottomleft);
-  .background-clip(padding-box);
+.border-radius(...) {
+  -webkit-border-radius: @arguments;
+     -moz-border-radius: @arguments;
+          border-radius: @arguments;
 }//.border-radius
 
 
