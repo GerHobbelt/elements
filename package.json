@@ -1,0 +1,10 @@
+{
+  "name"            : "less-elements",
+  "version"         : "1.0.0",
+  "description"     : "A set of useful mixins for LESS, the CSS pre-processor: http://lesscss.org",
+  "private"         : false,
+  "repository"      : {
+    "type" : "git",
+    "url"  : "https://github.com/dmitryf/elements"
+  }
+}
