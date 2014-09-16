@@ -75,7 +75,7 @@ for arguments.
 	
 2. Use semicolons (;) to separate arguments. 
 	
-	See "Mixins With Multiple Parameters" at <http://www.lesscss.org/#-parametric-mixins>
+	See "Mixins With Multiple Parameters" at <http://lesscss.org/features/#mixins-parametric-feature-mixins-with-multiple-parameters>
 	
 3. Always put a semicolon after the last argument.
 
