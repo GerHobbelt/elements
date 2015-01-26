@@ -16,3 +16,12 @@
   position: -o-sticky;
   position: sticky;
 }//.sticky
+
+/* Currently, no major browser supports the unprefixed property.
+ * This does not work in IE or Opera.
+ */
+.appearance(...) {
+  -webkit-appearance: @arguments;
+     -moz-appearance: @arguments;
+          appearance: @arguments;
+}//.appearance

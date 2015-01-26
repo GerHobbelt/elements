@@ -4,6 +4,7 @@
  *
  */
 @import "elements.less";
+@import "transforms.less";
 
 .gradient(@color:#F5F5F5; @start:#EEE; @stop:#FFF) {
   background: @color;
@@ -53,22 +54,6 @@
   .column-rule-style(@columnRuleStyle);
   .column-rule-width(@columnRuleWidht);
 }//.columns
-
-
-
-/* Transform Mixins
- * ============================================================ */
-.rotate(@deg:5deg;){
-  .transform( rotate(@deg) );
-}//.rotate
-
-.scale(@ratio:1.5;){
-  .transform( scale(@ratio) );
-}//.scale
-
-.translate(@x:0; @y:0;) {
-  .transform( translate(@x, @y) );
-}//.translate
 
 
 
