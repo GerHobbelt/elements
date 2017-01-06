@@ -1,3 +1,6 @@
+## 1.2.0
+* [+] `.animation-duration(...)`
+
 ## 1.1.0
 
 * [+] `.appearance(...)`
