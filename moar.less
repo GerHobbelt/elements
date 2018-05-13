@@ -1,0 +1,47 @@
+/*---------------------------------------------------*\
+    MOAR LESS Mixins
+\*---------------------------------------------------*/
+
+// See https://caniuse.com/#feat=user-select-none
+.user-select(...) {
+  -webkit-user-select: @arguments;
+     -moz-user-select: @arguments;
+      -ms-user-select: @arguments;
+          user-select: @arguments;
+}
+
+// See https://caniuse.com/#feat=css-sticky
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+// https://caniuse.com/#feat=css-appearance
+.appearance(...) {
+  -webkit-appearance: @arguments;
+     -moz-appearance: @arguments;
+          appearance: @arguments;
+}
+
+/* ========== Multi-column Mixins ========== */
+.columns(@width:250px; @count:0; @gap:50px; @ruleColor:#EEE; @ruleStyle:solid; @ruleWidth:1px;) {
+  column-width: @width;
+  column-count: @count;
+  column-gap: @gap;
+  column-rule-color: @ruleColor;
+  column-rule-style: @ruleStyle;
+  column-rule-width: @ruleWidth;
+}
+
+/* ========== Pseudo-Elements ========== */
+.selection(@background, @color) {
+  ::selection {
+    background: @background;
+    color: @color;
+  }
+
+  ::-moz-selection {
+    background: @background;
+    color: @color;
+  }
+}
